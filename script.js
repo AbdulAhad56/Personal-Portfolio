@@ -112,55 +112,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Contact Form Validation (Client-side JavaScript only)
     const contactForm = document.getElementById('contact-form');
-
+    
     contactForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent default form submission
+    let isValid = true;
 
-        let isValid = true;
+    // Clear previous error messages
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => el.classList.remove('invalid'));
 
-        // Clear previous error messages
-        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-        document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => el.classList.remove('invalid'));
+    // Name validation
+    const nameInput = document.getElementById('name');
+    if (nameInput.value.trim() === '') {
+        document.getElementById('name-error').textContent = 'Name is required.';
+        nameInput.classList.add('invalid');
+        isValid = false;
+    }
 
-        // Name validation
-        const nameInput = document.getElementById('name');
-        if (nameInput.value.trim() === '') {
-            document.getElementById('name-error').textContent = 'Name is required.';
-            nameInput.classList.add('invalid');
-            isValid = false;
-        }
+    // Email validation
+    const emailInput = document.getElementById('email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() === '') {
+        document.getElementById('email-error').textContent = 'Email is required.';
+        emailInput.classList.add('invalid');
+        isValid = false;
+    } else if (!emailPattern.test(emailInput.value.trim())) {
+        document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+        emailInput.classList.add('invalid');
+        isValid = false;
+    }
 
-        // Email validation
-        const emailInput = document.getElementById('email');
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailInput.value.trim() === '') {
-            document.getElementById('email-error').textContent = 'Email is required.';
-            emailInput.classList.add('invalid');
-            isValid = false;
-        } else if (!emailPattern.test(emailInput.value.trim())) {
-            document.getElementById('email-error').textContent = 'Please enter a valid email address.';
-            emailInput.classList.add('invalid');
-            isValid = false;
-        }
+    // Message validation
+    const messageInput = document.getElementById('message');
+    if (messageInput.value.trim() === '') {
+        document.getElementById('message-error').textContent = 'Message is required.';
+        messageInput.classList.add('invalid');
+        isValid = false;
+    } else if (messageInput.value.trim().length < 10) {
+        document.getElementById('message-error').textContent = 'Message must be at least 10 characters long.';
+        messageInput.classList.add('invalid');
+        isValid = false;
+    }
 
-        // Message validation
-        const messageInput = document.getElementById('message');
-        if (messageInput.value.trim() === '') {
-            document.getElementById('message-error').textContent = 'Message is required.';
-            messageInput.classList.add('invalid');
-            isValid = false;
-        } else if (messageInput.value.trim().length < 10) {
-            document.getElementById('message-error').textContent = 'Message must be at least 10 characters long.';
-            messageInput.classList.add('invalid');
-            isValid = false;
-        }
+    if (!isValid) {
+        e.preventDefault(); // Only prevent submission if validation fails
+    }
+});
 
-        if (isValid) {
-            // If validation passes, you can simulate a submission or send data (e.g., to an API)
-            alert('Form submitted successfully! (This is a demo, no actual submission)');
-            contactForm.reset(); // Clear the form
-        }
-    });
 
     // Animate skill bars on scroll
     const skillBars = document.querySelectorAll('.skill-level');
