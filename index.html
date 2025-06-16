@@ -60,22 +60,23 @@
             <div class="about-text">
               <p>
                 Hello! I'm Abdul Ahad, a passionate Front-End Web Developer
-                dedicated to building engaging and user-friendly web
-                applications. With a strong foundation in HTML and CSS, I
-                specialize in creating visually appealing and responsive
-                interfaces.
+                focused on creating responsive, user-friendly, and visually
+                engaging web applications.
               </p>
               <p>
-                My expertise extends to interactive experiences using JavaScript
-                and its powerful library, jQuery. I'm also proficient in
-                utilizing preprocessors like Sass for efficient styling and
-                frameworks like Bootstrap for rapid development.
+                I specialize in building clean, intuitive interfaces that look
+                great and perform well across all devices and browsers. My
+                skills include crafting interactive experiences using JavaScript
+                and jQuery, writing scalable styles with Sass, and using
+                frameworks like Bootstrap and Tailwind CSS for efficient, modern
+                development.
               </p>
               <p>
-                I enjoy bringing designs to life, ensuring seamless user
-                experiences across various devices and browsers. Let's build
-                something amazing together!
+                I’m driven by the challenge of turning design concepts into
+                seamless, functional websites that provide excellent user
+                experiences.
               </p>
+              <p>Let’s collaborate and build something impactful together!</p>
             </div>
           </div>
         </div>
@@ -292,11 +293,27 @@
                 <div class="skill-level" style="width: 85%"></div>
               </div>
             </div>
-            <!-- <div class="skill-item">
-                        <img src="assets/images/js.png" alt="jQuery">
-                        <p>jQuery</p>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-                    </div> -->
+            <div class="skill-item">
+              <img src="assets/images/tailwind-css.png" alt="Tailwind CSS" />
+              <p>Tailwind CSS</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="assets/images/bootstrap.png" alt="Bootstrap" />
+              <p>Bootstrap</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img src="assets/images/jquery.png" alt="jQuery" />
+              <p>jQuery</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+              </div>
+            </div>
             <div class="skill-item">
               <img src="assets/images/sass.png" alt="Sass" />
               <p>Sass</p>
@@ -305,8 +322,24 @@
               </div>
             </div>
             <div class="skill-item">
-              <img src="assets/images/bootstrap.png" alt="Bootstrap" />
-              <p>Bootstrap</p>
+              <img src="assets/images/figma.png" alt="Figma" />
+              <p>Figma</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="assets/images/github.png" alt="Git & GitHub" />
+              <p>Git & GitHub</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="assets/images/launch.png" alt="Launch" />
+              <p>Deployment</p>
               <div class="skill-bar">
                 <div class="skill-level" style="width: 70%"></div>
               </div>
@@ -351,6 +384,59 @@
                 better user experience.
               </p>
             </div>
+            <div class="service-card">
+              <i class="fas fa-search service-icon"></i>
+              <h3>SEO-Friendly Markup</h3>
+              <p>
+                Structuring your website for better visibility on search engines
+                using semantic HTML and meta data.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <i class="fas fa-code-branch service-icon"></i>
+              <h3>Version Control</h3>
+              <p>
+                Using Git and GitHub to manage code efficiently and collaborate
+                smoothly on projects.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <i class="fas fa-globe service-icon"></i>
+              <h3>Cross-Browser Compatibility</h3>
+              <p>
+                Testing and ensuring consistent design and behavior across all
+                major browsers and devices.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <i class="fas fa-check-circle service-icon"></i>
+              <h3>Form Integration & Validation</h3>
+              <p>
+                Developing secure forms with client-side validation and Google
+                reCAPTCHA integration.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <i class="fas fa-cloud-upload-alt service-icon"></i>
+              <h3>Deployment</h3>
+              <p>
+                Launching secure, high-performance websites with custom domains
+                and HTTPS using modern, reliable hosting solutions.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <i class="fas fa-tools service-icon"></i>
+              <h3>Maintenance & Updates</h3>
+              <p>
+                Providing continuous support, feature updates, and bug fixing
+                post-launch.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -362,20 +448,31 @@
             <form
               id="contact-form"
               class="contact-form"
-              method="post"
+              method="POST"
               name="contact"
-              netlify
+              data-netlify="true"
+              netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact" />
+
+              <p hidden>
+                <label
+                  >Don’t fill this out if you're human: <input name="bot-field"
+                /></label>
+              </p>
+
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
                 <div class="error-message" id="name-error"></div>
               </div>
+
               <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required />
                 <div class="error-message" id="email-error"></div>
               </div>
+
               <div class="form-group">
                 <label for="message">Message:</label>
                 <textarea
@@ -386,10 +483,15 @@
                 ></textarea>
                 <div class="error-message" id="message-error"></div>
               </div>
+
+              <!-- Netlify reCAPTCHA -->
+              <div data-netlify-recaptcha="true" style="margin: 1rem 0"></div>
+
               <button type="submit" class="btn primary-btn">
                 Send Message
               </button>
             </form>
+
             <div class="contact-info">
               <h3>Connect with me:</h3>
               <ul>
