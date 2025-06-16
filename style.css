@@ -224,7 +224,7 @@ img {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://via.placeholder.com/1920x1080/007bff/ffffff?text=Hero+Background")
+    url("assets/images/background.png")
       no-repeat center center/cover;
   color: #fff;
   height: 100vh;
@@ -233,11 +233,14 @@ img {
   align-items: center;
   text-align: center;
   animation: fadeIn 1s ease-out;
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .hero-content h1 {
   font-size: 3.5em;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   animation: slideInFromTop 1s ease-out;
 }
 
@@ -285,8 +288,8 @@ img {
 .about-text p {
   margin-bottom: 15px;
   font-size: 1.1em;
+  text-align: justify;
 }
-
 /* Projects Section */
 .projects-section {
   padding: 80px 0;
@@ -333,6 +336,7 @@ img {
   font-size: 0.95em;
   padding: 0 15px 15px;
   flex-grow: 1;
+  text-align: justify;
 }
 
 .project-links {
@@ -724,12 +728,14 @@ body.dark-mode footer {
 
   .hero-content h1 {
     font-size: 2.5em;
+    padding: 0px 20px;
   }
 
   .hero-content p {
     font-size: 1em;
+    padding: 0px 20px;
   }
-
+  
   .about-content,
   .contact-content {
     flex-direction: column;
@@ -761,6 +767,29 @@ body.dark-mode footer {
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 375px) {
+   .hero-content h1,
+  .hero-content p {
+    padding: 0 20px;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image,
+  .about-text {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .about-text p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1em;
+  }
+}
+
 
 /* Tablet devices (max-width: 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
