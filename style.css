@@ -224,7 +224,7 @@ img {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/images/background.png")
+    url("assets/images/background.webp")
       no-repeat center center/cover;
   color: #fff;
   height: 100vh;
