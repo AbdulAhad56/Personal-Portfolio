@@ -224,8 +224,7 @@ img {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/images/background.webp")
-      no-repeat center center/cover;
+    url("assets/images/background.webp") no-repeat center center/cover;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -234,8 +233,8 @@ img {
   text-align: center;
   animation: fadeIn 1s ease-out;
   background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content h1 {
@@ -329,7 +328,6 @@ background-repeat: no-repeat;
   font-size: 1.5em;
   margin: 15px 15px 10px;
   color: var(--primary-color);
-  
 }
 
 .project-card p {
@@ -735,7 +733,7 @@ body.dark-mode footer {
     font-size: 1em;
     padding: 0px 20px;
   }
-  
+
   .about-content,
   .contact-content {
     flex-direction: column;
@@ -769,7 +767,7 @@ body.dark-mode footer {
 }
 
 @media (max-width: 375px) {
-   .hero-content h1,
+  .hero-content h1,
   .hero-content p {
     padding: 0 20px;
   }
@@ -789,7 +787,6 @@ body.dark-mode footer {
     font-size: 1em;
   }
 }
-
 
 /* Tablet devices (max-width: 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
