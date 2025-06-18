@@ -13,6 +13,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -22,8 +24,8 @@
         <ul class="nav-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -43,21 +45,27 @@
     <main>
       <!-- Hero Section -->
       <section id="hero" class="hero-section">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up">
           <h1>Hi, I'm Abdul Ahad — Front-End Web Developer</h1>
           <p>
             Building visually engaging, responsive, and user-friendly web
             experiences.
           </p>
-          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a
+            href="#contact"
+            class="btn primary-btn"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            >Hire Me</a
+          >
         </div>
       </section>
 
       <!-- About Me Section -->
       <section id="about" class="about-section">
         <div class="container">
-          <h2 class="section-title">About Me</h2>
-          <div class="about-content">
+          <h2 class="section-title" data-aos="flip-up">About Me</h2>
+          <div class="about-content" data-aos="fade-right">
             <div class="about-image">
               <img
                 src="assets/images/profile.webp"
@@ -65,7 +73,7 @@
                 alt="Abdul Ahad Profile Picture"
               />
             </div>
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-left">
               <p>
                 Hello! I'm Abdul Ahad, a passionate Front-End Web Developer
                 focused on creating responsive, user-friendly, and visually
@@ -90,12 +98,117 @@
         </div>
       </section>
 
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/images/html.webp" loading="lazy" alt="HTML5" />
+              <p>HTML5</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/images/css.webp" loading="lazy" alt="CSS3" />
+              <p>CSS3</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+              <img
+                src="assets/images/js.webp"
+                loading="lazy"
+                alt="JavaScript"
+              />
+              <p>JavaScript</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+              <img
+                src="assets/images/tailwind-css.webp"
+                loading="lazy"
+                alt="Tailwind CSS"
+              />
+              <p>Tailwind CSS</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+              <img
+                src="assets/images/bootstrap.webp"
+                loading="lazy"
+                alt="Bootstrap"
+              />
+              <p>Bootstrap</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+              <img
+                src="assets/images/jquery.webp"
+                loading="lazy"
+                alt="jQuery"
+              />
+              <p>jQuery</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+              <img src="assets/images/sass.webp" loading="lazy" alt="Sass" />
+              <p>Sass</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 55%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+              <img src="assets/images/figma.webp" loading="lazy" alt="Figma" />
+              <p>Figma</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 60%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+              <img
+                src="assets/images/github.webp"
+                loading="lazy"
+                alt="Git & GitHub"
+              />
+              <p>Git & GitHub</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+              <img
+                src="assets/images/launch.webp"
+                loading="lazy"
+                alt="Launch"
+              />
+              <p>Deployment</p>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Projects Section -->
       <section id="projects" class="projects-section">
         <div class="container">
-          <h2 class="section-title">My Projects</h2>
+          <h2 class="section-title" data-aos="fade-down">My Projects</h2>
           <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <img
                 src="assets/images/ATHLEIMAX.webp"
                 loading="lazy"
@@ -127,7 +240,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
               <img
                 src="assets/images/WCI.webp"
                 loading="lazy"
@@ -160,7 +273,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
               <img
                 src="assets/images/ZKU.webp"
                 loading="lazy"
@@ -190,7 +303,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
               <img
                 src="assets/images/portfolio.webp"
                 loading="lazy"
@@ -241,7 +354,7 @@
               </div>
             </div> -->
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
               <img
                 src="assets/images/Netflix.webp"
                 loading="lazy"
@@ -269,7 +382,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
               <img
                 src="assets/images/RCET.webp"
                 loading="lazy"
@@ -300,117 +413,12 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="skills-section">
-        <div class="container">
-          <h2 class="section-title">My Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <img src="assets/images/html.webp" loading="lazy" alt="HTML5" />
-              <p>HTML5</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 95%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/images/css.webp" loading="lazy" alt="CSS3" />
-              <p>CSS3</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="assets/images/js.webp"
-                loading="lazy"
-                alt="JavaScript"
-              />
-              <p>JavaScript</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="assets/images/tailwind-css.webp"
-                loading="lazy"
-                alt="Tailwind CSS"
-              />
-              <p>Tailwind CSS</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="assets/images/bootstrap.webp"
-                loading="lazy"
-                alt="Bootstrap"
-              />
-              <p>Bootstrap</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="assets/images/jquery.webp"
-                loading="lazy"
-                alt="jQuery"
-              />
-              <p>jQuery</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/images/sass.webp" loading="lazy" alt="Sass" />
-              <p>Sass</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 55%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img src="assets/images/figma.webp" loading="lazy" alt="Figma" />
-              <p>Figma</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 60%"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <img
-                src="assets/images/github.webp"
-                loading="lazy"
-                alt="Git & GitHub"
-              />
-              <p>Git & GitHub</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <img
-                src="assets/images/launch.webp"
-                loading="lazy"
-                alt="Launch"
-              />
-              <p>Deployment</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Services Section -->
       <section id="services" class="services-section">
         <div class="container">
-          <h2 class="section-title">What I Offer</h2>
+          <h2 class="section-title" data-aos="zoom-in">What I Offer</h2>
           <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
               <i class="fas fa-laptop-code service-icon"></i>
               <h3>Website Development</h3>
               <p>
@@ -418,7 +426,7 @@
                 specific needs.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
               <i class="fas fa-palette service-icon"></i>
               <h3>UI/UX Implementation</h3>
               <p>
@@ -426,7 +434,7 @@
                 interfaces.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
               <i class="fas fa-mobile-alt service-icon"></i>
               <h3>Responsive Design</h3>
               <p>
@@ -434,7 +442,7 @@
                 all devices.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
               <i class="fas fa-tachometer-alt service-icon"></i>
               <h3>Speed Optimization</h3>
               <p>
@@ -442,7 +450,7 @@
                 better user experience.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
               <i class="fas fa-search service-icon"></i>
               <h3>SEO-Friendly Markup</h3>
               <p>
@@ -451,7 +459,7 @@
               </p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
               <i class="fas fa-code-branch service-icon"></i>
               <h3>Version Control</h3>
               <p>
@@ -460,7 +468,7 @@
               </p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="700">
               <i class="fas fa-globe service-icon"></i>
               <h3>Cross-Browser Compatibility</h3>
               <p>
@@ -469,7 +477,7 @@
               </p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="800">
               <i class="fas fa-check-circle service-icon"></i>
               <h3>Form Integration & Validation</h3>
               <p>
@@ -478,7 +486,7 @@
               </p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="900">
               <i class="fas fa-cloud-upload-alt service-icon"></i>
               <h3>Deployment</h3>
               <p>
@@ -487,7 +495,7 @@
               </p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="1000">
               <i class="fas fa-tools service-icon"></i>
               <h3>Maintenance & Updates</h3>
               <p>
@@ -500,9 +508,9 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="contact-section">
+      <section id="contact" class="contact-section" data-aos="flip-down">
         <div class="container">
-          <h2 class="section-title">Get In Touch</h2>
+          <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
           <div class="contact-content">
             <form
               id="contact-form"
@@ -548,7 +556,7 @@
               </button>
             </form>
 
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-left">
               <h3>Connect with me:</h3>
               <ul>
                 <li>
@@ -594,6 +602,15 @@
         <p>&copy; 2025 Abdul Ahad. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in milliseconds
+        once: true, // whether animation should happen only once
+      });
+    </script>
 
     <!-- Script -->
     <script src="script.js"></script>
