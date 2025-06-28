@@ -114,7 +114,7 @@ img {
 .section-title {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   position: relative;
   padding-bottom: 10px;
 }
@@ -129,6 +129,13 @@ img {
   height: 4px;
   background-color: var(--primary-color);
   border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  position: relative;
 }
 
 /* Header & Navigation */
