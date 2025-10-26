@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Smooth Scrolling for Navigation
+    // Smooth Scrolling for Navigation (only for in-page links)
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
 
-            // Close mobile menu if open
-            if (window.innerWidth <= 768) {
-                const navLinks = document.querySelector('.nav-links');
-                const hamburger = document.querySelector('.hamburger');
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
+            // Only prevent default for same-page links (starting with "#")
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    const navLinks = document.querySelector('.nav-links');
+                    const hamburger = document.querySelector('.hamburger');
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             }
         });
     });
@@ -27,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function highlightActiveLink() {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - header.offsetHeight; // Account for sticky header
+            const sectionTop = section.offsetTop - header.offsetHeight;
             if (pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
@@ -35,7 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLinks.forEach(a => {
             a.classList.remove('active');
-            if (a.getAttribute('href').includes(current)) {
+
+            // Highlight if href matches section ID
+            if (current && a.getAttribute('href').includes(current)) {
+                a.classList.add('active');
+            }
+
+            // Highlight multi-page links (e.g., Blog)
+            const href = a.getAttribute('href');
+            const currentPath = location.pathname.split("/").pop();
+            if (href === currentPath) {
                 a.classList.add('active');
             }
         });
@@ -53,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial highlight on load
     highlightActiveLink();
 
-
     // Hamburger Menu for Mobile
     const hamburger = document.querySelector('.hamburger');
     const navLinksContainer = document.querySelector('.nav-links');
@@ -67,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById('scroll-to-top');
 
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) { // Show button after scrolling 300px
+        if (window.pageYOffset > 300) {
             scrollToTopBtn.classList.add('show');
         } else {
             scrollToTopBtn.classList.remove('show');
@@ -86,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const sunIcon = themeToggle.querySelector('.fa-sun');
     const moonIcon = themeToggle.querySelector('.fa-moon');
 
-    // Check for saved theme preference or default to light
     const currentTheme = localStorage.getItem('theme') || 'light';
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -110,54 +121,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Contact Form Validation (Client-side JavaScript only)
+    // Contact Form Validation (safe check added)
     const contactForm = document.getElementById('contact-form');
-    
-    contactForm.addEventListener('submit', function (e) {
-    let isValid = true;
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            let isValid = true;
 
-    // Clear previous error messages
-    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-    document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => el.classList.remove('invalid'));
+            // Clear previous error messages
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => el.classList.remove('invalid'));
 
-    // Name validation
-    const nameInput = document.getElementById('name');
-    if (nameInput.value.trim() === '') {
-        document.getElementById('name-error').textContent = 'Name is required.';
-        nameInput.classList.add('invalid');
-        isValid = false;
+            // Name validation
+            const nameInput = document.getElementById('name');
+            if (nameInput.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Name is required.';
+                nameInput.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.value.trim() === '') {
+                document.getElementById('email-error').textContent = 'Email is required.';
+                emailInput.classList.add('invalid');
+                isValid = false;
+            } else if (!emailPattern.test(emailInput.value.trim())) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+                emailInput.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Message validation
+            const messageInput = document.getElementById('message');
+            if (messageInput.value.trim() === '') {
+                document.getElementById('message-error').textContent = 'Message is required.';
+                messageInput.classList.add('invalid');
+                isValid = false;
+            } else if (messageInput.value.trim().length < 10) {
+                document.getElementById('message-error').textContent = 'Message must be at least 10 characters long.';
+                messageInput.classList.add('invalid');
+                isValid = false;
+            }
+
+            if (!isValid) e.preventDefault();
+        });
     }
-
-    // Email validation
-    const emailInput = document.getElementById('email');
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailInput.value.trim() === '') {
-        document.getElementById('email-error').textContent = 'Email is required.';
-        emailInput.classList.add('invalid');
-        isValid = false;
-    } else if (!emailPattern.test(emailInput.value.trim())) {
-        document.getElementById('email-error').textContent = 'Please enter a valid email address.';
-        emailInput.classList.add('invalid');
-        isValid = false;
-    }
-
-    // Message validation
-    const messageInput = document.getElementById('message');
-    if (messageInput.value.trim() === '') {
-        document.getElementById('message-error').textContent = 'Message is required.';
-        messageInput.classList.add('invalid');
-        isValid = false;
-    } else if (messageInput.value.trim().length < 10) {
-        document.getElementById('message-error').textContent = 'Message must be at least 10 characters long.';
-        messageInput.classList.add('invalid');
-        isValid = false;
-    }
-
-    if (!isValid) {
-        e.preventDefault(); // Only prevent submission if validation fails
-    }
-});
-
 
     // Animate skill bars on scroll
     const skillBars = document.querySelectorAll('.skill-level');
@@ -167,13 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const sectionTop = skillsSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight * 0.75) { // When 75% of the section is visible
+        if (sectionTop < windowHeight * 0.75) {
             skillBars.forEach(bar => {
                 const width = bar.style.width;
-                bar.style.setProperty('--skill-level-width', width); // Set custom property for animation
+                bar.style.setProperty('--skill-level-width', width);
                 bar.style.animation = 'fillSkillBar 1.5s ease-out forwards';
             });
-            window.removeEventListener('scroll', animateSkills); // Remove listener after animation
+            window.removeEventListener('scroll', animateSkills);
         }
     };
 

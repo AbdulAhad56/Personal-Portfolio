@@ -1,552 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdul Ahad — Front-End Web Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-      <nav class="navbar">
-        <a href="#" class="logo">Abdul Ahad</a>
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="theme-toggle">
-          <i class="fas fa-sun toggle-icon"></i>
-          <i class="fas fa-moon toggle-icon"></i>
-        </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
 
-    <!-- Main -->
-    <main>
-      <!-- Hero Section -->
-      <section id="hero" class="hero-section">
-        <div class="hero-content" data-aos="fade-up">
-          <h1>Hi, I'm Abdul Ahad — Front-End Web Developer</h1>
-          <p>
-            Building visually engaging, responsive, and user-friendly web
-            experiences.
-          </p>
-          <a
-            href="#contact"
-            class="btn primary-btn"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-            >Get In Touch</a
-          >
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Ahad — Front-End Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
 
-      <!-- About Me Section -->
-      <section id="about" class="about-section">
-        <div class="container">
-          <h2 class="section-title" data-aos="flip-up">About Me</h2>
-          <div class="about-content" data-aos="fade-right">
-            <div class="about-image">
-              <img
-                src="assets/images/AbdulAhad.png"
-                loading="lazy"
-                alt="Abdul Ahad Profile Picture"
-              />
-            </div>
-            <div class="about-text" data-aos="fade-left">
-              <p>
-                Hello! I'm Abdul Ahad — a passionate Front-End Developer
-                dedicated to crafting responsive, user-friendly, and visually
-                engaging websites.
-              </p>
-              <p>
-                I specialize in building clean, accessible interfaces that work
-                seamlessly across all devices and browsers. My toolkit includes
-                HTML, CSS, JavaScript, Sass, Bootstrap, and Tailwind CSS — plus
-                experience with interactive elements using jQuery.
-              </p>
-              <p>
-                I love transforming design concepts into fast, functional
-                websites that deliver excellent user experiences and
-                performance.
-              </p>
-              <p>Let's collaborate and build something impactful together!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="skills-section">
-        <div class="container">
-          <h2 class="section-title" data-aos="fade-up">My Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-item" data-aos="zoom-in">
-              <img src="assets/images/html.webp" loading="lazy" alt="HTML5" />
-              <p>HTML5</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 95%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/images/css.webp" loading="lazy" alt="CSS3" />
-              <p>CSS3</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-              <img
-                src="assets/images/js.webp"
-                loading="lazy"
-                alt="JavaScript"
-              />
-              <p>JavaScript</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-              <img
-                src="assets/images/tailwind-css.webp"
-                loading="lazy"
-                alt="Tailwind CSS"
-              />
-              <p>Tailwind CSS</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-              <img
-                src="assets/images/bootstrap.webp"
-                loading="lazy"
-                alt="Bootstrap"
-              />
-              <p>Bootstrap</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-              <img
-                src="assets/images/jquery.webp"
-                loading="lazy"
-                alt="jQuery"
-              />
-              <p>jQuery</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
-              <img src="assets/images/sass.webp" loading="lazy" alt="Sass" />
-              <p>Sass</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 55%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-              <img src="assets/images/figma.webp" loading="lazy" alt="Figma" />
-              <p>Figma</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 60%"></div>
-              </div>
-            </div>
-
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
-              <img
-                src="assets/images/github.webp"
-                loading="lazy"
-                alt="Git & GitHub"
-              />
-              <p>Git & GitHub</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-
-            <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-              <img
-                src="assets/images/launch.webp"
-                loading="lazy"
-                alt="Launch"
-              />
-              <p>Deployment</p>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="projects-section">
-        <div class="container">
-          <h2 class="section-title" data-aos="fade-down">My Projects</h2>
-          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="50">
-            Real-world work, personal builds, and creative experiments.
-          </p>
-          <div class="projects-grid">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-              <img
-                src="assets/images/ATHLEIMAX.webp"
-                loading="lazy"
-                alt="ATHLEIMAX Project"
-              />
-              <h3>ATHLEIMAX</h3>
-              <p>
-                Designed and developed a production-ready sportswear website
-                featuring responsive layouts, product showcases, and brand
-                storytelling. Built with HTML, CSS, JavaScript, and Bootstrap.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://athleimax.com/"
-                  target="_blank"
-                  class="btn primary-btn"
-                >
-                  Live Demo <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/images/WCI.webp"
-                loading="lazy"
-                alt="Wajid & Company International Project"
-              />
-              <h3>Wajid & Company International</h3>
-              <p>
-                Built a professional company website with a focus on brand
-                identity, product categories, and export certifications.
-                Developed using HTML, CSS, and Bootstrap.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://wajidcompanyinternational.netlify.app/"
-                  target="_blank"
-                  class="btn primary-btn"
-                >
-                  Live Demo <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-              <img
-                src="assets/images/ZKU.webp"
-                loading="lazy"
-                alt="Five ZKU Impex Project"
-              />
-              <h3>Five ZKU Impex</h3>
-              <p>
-                Designed a dynamic and mobile-first website for a fitness brand
-                to highlight product collections and streamline brand
-                presentation. Developed using HTML, CSS, and jQuery.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://abdulahad56.github.io/SportsWear.github.io/"
-                  target="_blank"
-                  class="btn primary-btn"
-                >
-                  Live Demo <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-              <img
-                src="assets/images/portfolio.webp"
-                loading="lazy"
-                alt="Project 4"
-              />
-              <h3>Personal Portfolio Website</h3>
-              <p>
-                Personal portfolio built with HTML, Sass, and JavaScript.
-                Responsive, accessible, and deployed via Netlify.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://abdulahadportfolio.netlify.app/"
-                  target="_blank"
-                  class="btn primary-btn"
-                  >Live Demo <i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-              <img
-                src="assets/images/Netflix.webp"
-                loading="lazy"
-                alt="Project 6"
-              />
-              <h3>Netflix Homepage Clone</h3>
-              <p>
-                Netflix homepage clone built using HTML, CSS, and JavaScript.
-                Features include a hero section, responsive layout, and styled
-                banner overlay
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://online-stream-ui-clone.netlify.app/"
-                  target="_blank"
-                  class="btn primary-btn"
-                  >Live Demo <i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-              <img
-                src="assets/images/RCET.webp"
-                loading="lazy"
-                alt="Project 7"
-              />
-              <h3>UET RCET Website</h3>
-              <p>
-                Developed a responsive clone of UET RCET's website using HTML,
-                CSS, and JavaScript. Showcases department sections, academic
-                info, and navigation structure.
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://abdulahad56.github.io/UET-RCET-Website/"
-                  target="_blank"
-                  class="btn primary-btn"
-                  >Live Demo <i class="fas fa-external-link-alt"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section id="services" class="services-section">
-        <div class="container">
-          <h2 class="section-title" data-aos="zoom-in">What I Offer</h2>
-          <div class="services-grid">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="fas fa-laptop-code service-icon"></i>
-              <h3>Website Development</h3>
-              <p>
-                Building custom, high-quality websites from scratch to meet your
-                specific needs.
-              </p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="fas fa-palette service-icon"></i>
-              <h3>UI/UX Implementation</h3>
-              <p>
-                Translating design mockups into pixel-perfect and user-friendly
-                interfaces.
-              </p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="fas fa-mobile-alt service-icon"></i>
-              <h3>Responsive Design</h3>
-              <p>
-                Ensuring your website looks great and functions flawlessly on
-                all devices.
-              </p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-              <i class="fas fa-tachometer-alt service-icon"></i>
-              <h3>Speed Optimization</h3>
-              <p>
-                Optimizing website performance for faster loading times and
-                better user experience.
-              </p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-              <i class="fas fa-search service-icon"></i>
-              <h3>SEO-Friendly Markup</h3>
-              <p>
-                Structuring your website for better visibility on search engines
-                using semantic HTML and meta data.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-              <i class="fas fa-code-branch service-icon"></i>
-              <h3>Version Control</h3>
-              <p>
-                Using Git and GitHub to manage code efficiently and collaborate
-                smoothly on projects.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="700">
-              <i class="fas fa-globe service-icon"></i>
-              <h3>Cross-Browser Compatibility</h3>
-              <p>
-                Testing and ensuring consistent design and behavior across all
-                major browsers and devices.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="800">
-              <i class="fas fa-check-circle service-icon"></i>
-              <h3>Form Integration & Validation</h3>
-              <p>
-                Developing secure forms with client-side validation and Google
-                reCAPTCHA integration.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="900">
-              <i class="fas fa-cloud-upload-alt service-icon"></i>
-              <h3>Deployment</h3>
-              <p>
-                Launching secure, high-performance websites with custom domains
-                and HTTPS using modern, reliable hosting solutions.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="1000">
-              <i class="fas fa-tools service-icon"></i>
-              <h3>Maintenance & Updates</h3>
-              <p>
-                Providing continuous support, feature updates, and bug fixing
-                post-launch.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section" data-aos="flip-down">
-        <div class="container">
-          <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-          <div class="contact-content">
-            <form
-              id="contact-form"
-              class="contact-form"
-              method="POST"
-              name="contact"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-
-              <p hidden>
-                <label
-                  >Don’t fill this out if you're human: <input name="bot-field"
-                /></label>
-              </p>
-
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-                <div class="error-message" id="name-error"></div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-                <div class="error-message" id="email-error"></div>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                ></textarea>
-                <div class="error-message" id="message-error"></div>
-              </div>
-
-              <button type="submit" class="btn primary-btn">
-                Send Message
-              </button>
-            </form>
-
-            <div class="contact-info" data-aos="fade-left">
-              <h3>Connect with me:</h3>
-              <ul>
-                <li>
-                  <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=ahad38390@gmail.com"
-                    target="_blank"
-                  >
-                    <i class="fas fa-envelope"></i> Email/Abdul Ahad
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/abdul-ahad56"
-                    target="_blank"
-                    ><i class="fab fa-linkedin"></i> LinkedIn/Abdul Ahad</a
-                  >
-                </li>
-                <li>
-                  <a href="https://github.com/AbdulAhad56" target="_blank"
-                    ><i class="fab fa-github"></i> GitHub/Abdul Ahad</a
-                  >
-                </li>
-                <li>
-                  <a href="https://wa.me/923182459653" target="_blank"
-                    ><i class="fab fa-whatsapp"></i> WhatsApp/Abdul Ahad</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Scroll-to-top Button -->
-    <button id="scroll-to-top" class="scroll-to-top-btn" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Abdul Ahad. All rights reserved.</p>
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Abdul Ahad</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="blog/blog.html">Blog</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <i class="fas fa-sun toggle-icon"></i>
+        <i class="fas fa-moon toggle-icon"></i>
       </div>
-    </footer>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
 
-    <!-- AOS JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // animation duration in milliseconds
-        once: true, // whether animation should happen only once
-      });
-    </script>
+  <!-- Main -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Hi, I'm Abdul Ahad — AI & Data Science Enthusiast</h1>
+        <p>
+          Building intelligent, data-driven solutions and interactive web experiences that combine AI insights with
+          user-friendly design.
+        </p>
+        <a href="#contact" class="btn primary-btn" data-aos="zoom-in" data-aos-delay="100">Get In Touch</a>
+      </div>
+    </section>
 
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="flip-up">About Me</h2>
+        <div class="about-content" data-aos="fade-right">
+          <div class="about-image">
+            <img src="assets/images/AbdulAhad.png" loading="lazy" alt="Abdul Ahad Profile Picture" />
+          </div>
+          <div class="about-text" data-aos="fade-left">
+            <p>
+              Hello! I'm <span class="name">Abdul Ahad</span> — an AI & Data Science enthusiast dedicated to turning
+              data into actionable insights and intelligent solutions.
+            </p>
+
+            <p>
+              I specialize in analyzing complex datasets, building predictive models, and leveraging AI to automate
+              workflows, enhance decision-making, and deliver impactful results.
+            </p>
+
+            <p>My key areas of focus include:</p>
+            <ul class="skills-list">
+              <li>Data Analysis & Visualization (Pandas, NumPy, Matplotlib, Seaborn)</li>
+              <li>Machine Learning & AI (Scikit-learn, TensorFlow)</li>
+              <li>AI-driven Automation & Intelligent Systems</li>
+            </ul>
+
+            <p>
+              My goal is to bridge the gap between raw data and actionable insights, creating solutions that are not
+              just functional, but truly intelligent.
+            </p>
+
+            <p>
+              <a href="#contact" class="btn btn-primary">Let’s collaborate — Get in touch</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+
+        <div class="skills-grid">
+
+          <!-- AI & Data Science Skills -->
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/images/python.webp" alt="Python" loading="lazy" />
+            <p>Python</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
+            <img src="assets/images/pandas.webp" alt="Pandas" loading="lazy" />
+            <p>Pandas</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/images/numpy.webp" alt="NumPy" loading="lazy" />
+            <p>NumPy</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
+            <img src="assets/images/matplotlib.webp" alt="Matplotlib" loading="lazy" />
+            <p>Matplotlib</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/images/seaborn.webp" alt="Seaborn" loading="lazy" />
+            <p>Seaborn</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
+            <img src="assets/images/scikit-learn.webp" alt="Scikit-learn" loading="lazy" />
+            <p>Scikit-learn</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+            <img src="assets/images/tensorflow.webp" alt="TensorFlow" loading="lazy" />
+            <p>TensorFlow</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 65%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+            <img src="assets/images/ai-integration.webp" alt="AI Integration" loading="lazy" />
+            <p>AI Integration</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <!-- Core Front-End Skills (Kept minimal for versatility) -->
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+            <img src="assets/images/html.webp" alt="HTML" loading="lazy" />
+            <p>HTML</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">
+            <img src="assets/images/css.webp" alt="CSS" loading="lazy" />
+            <p>CSS</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+            <img src="assets/images/js.webp" alt="JavaScript" loading="lazy" />
+            <p>JavaScript</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-aos="zoom-in" data-aos-delay="650">
+            <img src="assets/images/github.webp" alt="Git & GitHub" loading="lazy" />
+            <p>Git & GitHub</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+        <div class="certifications-grid">
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.credly.com/badges/cd3afbcd-fbc8-4f33-abb4-87fa5dcb27c6/public_url" target="_blank">
+              <img src="assets/images/google-ada.webp" alt="Google Advanced Data Analytics Certificate"
+                loading="lazy" />
+              <h3>Google Advanced Data Analytics Certificate</h3>
+              <p>Issued by Coursera, 2025</p>
+              <p class="verify-link">Click to Verify</p>
+            </a>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://credsverse.com/credentials/6013c7ce-ed8b-4122-a26a-7e4bd732c912" target="_blank">
+              <img src="assets/images/ulefusa.webp" alt="Generative AI Application Developer Certificate"
+                loading="lazy" />
+              <h3>Generative AI Application Developer</h3>
+              <p>ULEFUSA Generative AI Training (2025)</p>
+              <p class="verify-link">Click to Verify</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="zoom-in">What I Offer</h2>
+        <div class="services-grid">
+
+          <!-- AI & Data Science -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-database service-icon"></i>
+            <h3>Data Analysis & Visualization</h3>
+            <p>
+              Analyzing datasets using Python, Pandas, and visualization tools like Matplotlib and Seaborn to uncover
+              actionable insights.
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-brain service-icon"></i>
+            <h3>Machine Learning Solutions</h3>
+            <p>
+              Designing and training predictive models using Scikit-learn and TensorFlow to solve real-world business
+              and research problems.
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-network-wired service-icon"></i>
+            <h3>AI Integration for Web & Apps</h3>
+            <p>
+              Integrating intelligent AI features into web and desktop applications for smarter, data-driven user
+              experiences.
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-chart-line service-icon"></i>
+            <h3>Data Dashboards</h3>
+            <p>
+              Building interactive dashboards that visualize data trends and KPIs for better decision-making and
+              reporting.
+            </p>
+          </div>
+
+          <!-- Web Development (Kept minimal for versatility) -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-laptop-code service-icon"></i>
+            <h3>Front-End Development</h3>
+            <p>
+              Developing responsive, efficient, and visually engaging web interfaces with HTML, CSS, and JavaScript.
+            </p>
+          </div>
+
+          <!-- Deployment & Maintenance -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-cloud-upload-alt service-icon"></i>
+            <h3>Model Deployment & Hosting</h3>
+            <p>
+              Deploying AI models and web applications on cloud platforms with proper scaling, version control, and
+              performance optimization.
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+            <i class="fas fa-tools service-icon"></i>
+            <h3>Support & Maintenance</h3>
+            <p>
+              Providing continuous monitoring, updates, and technical support to ensure stability and optimal
+              performance.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">My Projects</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="50">
+          Showcasing real-world projects, personal experiments, and innovative solutions in AI, data science, and web
+          development.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/ATHLEIMAX.webp" loading="lazy" alt="ATHLEIMAX Project" />
+            <h3>ATHLEIMAX</h3>
+            <p>
+              Designed and developed a production-ready sportswear website
+              featuring responsive layouts, product showcases, and brand
+              storytelling. Built with HTML, CSS, JavaScript, and Bootstrap.
+            </p>
+            <div class="project-links">
+              <a href="https://athleimax.com/" target="_blank" class="btn primary-btn">
+                Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/WCI.webp" loading="lazy" alt="Wajid & Company International Project" />
+            <h3>Wajid & Company International</h3>
+            <p>
+              Built a professional company website with a focus on brand
+              identity, product categories, and export certifications.
+              Developed using HTML, CSS, and Bootstrap.
+            </p>
+            <div class="project-links">
+              <a href="https://wajidcompanyinternational.netlify.app/" target="_blank" class="btn primary-btn">
+                Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/ZKU.webp" loading="lazy" alt="Five ZKU Impex Project" />
+            <h3>Five ZKU Impex</h3>
+            <p>
+              Designed a dynamic and mobile-first website for a fitness brand
+              to highlight product collections and streamline brand
+              presentation. Developed using HTML, CSS, and jQuery.
+            </p>
+            <div class="project-links">
+              <a href="https://abdulahad56.github.io/SportsWear.github.io/" target="_blank" class="btn primary-btn">
+                Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/portfolio.webp" loading="lazy" alt="Project 4" />
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              Personal portfolio built with HTML, Sass, and JavaScript.
+              Responsive, accessible, and deployed via Netlify.
+            </p>
+
+            <div class="project-links">
+              <a href="https://abdulahadportfolio.netlify.app/" target="_blank" class="btn primary-btn">Live Demo <i
+                  class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="assets/images/Netflix.webp" loading="lazy" alt="Project 6" />
+            <h3>Netflix Homepage Clone</h3>
+            <p>
+              Netflix homepage clone built using HTML, CSS, and JavaScript.
+              Features include a hero section, responsive layout, and styled
+              banner overlay
+            </p>
+            <div class="project-links">
+              <a href="https://online-stream-ui-clone.netlify.app/" target="_blank" class="btn primary-btn">Live Demo <i
+                  class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+            <img src="assets/images/RCET.webp" loading="lazy" alt="Project 7" />
+            <h3>UET RCET Website</h3>
+            <p>
+              Developed a responsive clone of UET RCET's website using HTML,
+              CSS, and JavaScript. Showcases department sections, academic
+              info, and navigation structure.
+            </p>
+            <div class="project-links">
+              <a href="https://abdulahad56.github.io/UET-RCET-Website/" target="_blank" class="btn primary-btn">Live
+                Demo <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" data-aos="flip-down">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-content">
+          <form id="contact-form" class="contact-form" method="POST" name="contact" data-netlify="true"
+            netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <p hidden>
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+              <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+              <div class="error-message" id="message-error"></div>
+            </div>
+
+            <button type="submit" class="btn primary-btn">
+              Send Message
+            </button>
+          </form>
+
+          <div class="contact-info" data-aos="fade-left">
+            <h3>Connect with me:</h3>
+            <ul>
+              <li>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahad38390@gmail.com" target="_blank">
+                  <i class="fas fa-envelope"></i> Email/Abdul Ahad
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/abdul-ahad56" target="_blank"><i class="fab fa-linkedin"></i>
+                  LinkedIn/Abdul Ahad</a>
+              </li>
+              <li>
+                <a href="https://github.com/AbdulAhad56" target="_blank"><i class="fab fa-github"></i> GitHub/Abdul
+                  Ahad</a>
+              </li>
+              <li>
+                <a href="https://wa.me/923182459653" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp/Abdul
+                  Ahad</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll-to-top Button -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Abdul Ahad | All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in milliseconds
+      once: true, // whether animation should happen only once
+    });
+  </script>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
 </html>
